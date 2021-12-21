@@ -9,6 +9,7 @@ public class Main {
         SentMqttTmp.init();
         ClientMQTT client = new ClientMQTT();
         client.start();
+        replayCenter.init();
     }
 
 }

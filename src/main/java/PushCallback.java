@@ -20,6 +20,7 @@ public class PushCallback implements MqttCallback {
         System.out.println("接收消息Qos : " + message.getQos());
         System.out.println("接收消息内容 : " + new String(message.getPayload()));
         String getStr = new String(message.getPayload());
+        replayCenter.get(getStr);
 //        if(getStr.charAt(0)!='g'){
 //            SentMqttTmp.pushMsg("get:"+getStr);
 //        }
